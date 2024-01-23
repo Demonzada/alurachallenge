@@ -32,7 +32,7 @@ function descriptografar() {
     remover1vez()
 
     var inputTxt = document.querySelector('textarea').value
-    var cripto = inputTxt.replaceAll('enter', 'ee').replaceAll('imes', 'i').replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
+    var cripto = inputTxt.replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
         direitoresultado.innerHTML = cripto
         titulo.innerHTML = "Texto descriptografado com sucesso"
 }
