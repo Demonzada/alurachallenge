@@ -1,6 +1,7 @@
 var direitoremover = document.querySelector(".direito_remover")
 var direitoresultado = document.querySelector(".direito_resultado")
 var titulo = document.querySelector(".titulo")
+var func = ""
 
 function verificarTexto() {
     var inputTxt = document.querySelector('textarea').value
@@ -17,7 +18,7 @@ function remover1vez() {
     element.classList.add("ligar")
 }
 
-function criptografar() {
+function criptografar(funcao) {
     verificarTexto()
     remover1vez()
 
@@ -25,9 +26,11 @@ function criptografar() {
     var cripto = inputTxt.replaceAll('e', 'enter').replaceAll('i', 'imes').replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat')
         direitoresultado.innerHTML = cripto
         titulo.innerHTML = "Texto criptografado com sucesso"
+    funcao = inputTxt.replaceAll('e', 'enter').replaceAll('i', 'imes').replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat')
+
 }
 
-function descriptografar() {
+function descriptografar(func) {
     verificarTexto()
     remover1vez()
 
@@ -38,8 +41,5 @@ function descriptografar() {
 }
 
 function copiar() {
-    var inputTxt = document.querySelector('textarea').value
-    var cripto = inputTxt.replaceAll('e', 'enter').replaceAll('i', 'imes').replaceAll('a', 'ai').replaceAll('o', 'ober').replaceAll('u', 'ufat')
-
-    navigator.clipboard.writeText(cripto)
+    navigator.clipboard.writeText(document.querySelector(".direito_resultado").innerHTML)
 }
