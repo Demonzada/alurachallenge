@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Alura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+            <img src="./assets/alura_azul.png" class="alura_logo">
+
+            <section class="central">        
+                <section class="container_esquerdo">
+                    <h1 class="titulo">Seja bem vindo ao Desafio Alura</h1>
+                    <textarea style="resize: none;" class="esquerdo_input" placeholder="Digite seu texto aqui"></textarea>
+                    
+                    <section class="esquerdo_descricao">
+                        <img src="assets/info.png" alt="Informativo" height="20px">
+                        <p class="esquerdo_descricao_texto">Apenas letras minúsculas e sem acento.</p>
+                    </section>
+
+                    <section class="container_botoes">
+                        <button onclick="criptografar()" class="botao_cripto">Criptografar</button>
+                        <button onclick="descriptografar()" class="botao_descripto">Descriptografar</button>
+                    </section>
+                </section>
+
+                <section class="container_direito">
+                        <h1 class="direito_resultado"></h1>
+                    <section class="direito_remover">   
+                            <img class="direito_imagem"src="assets/imagem-desc.svg" alt="Imagem descripto">
+                            <h1 class="direito_titulo">Nenhuma mensagem encontrada</h1>
+                            <p class="direito_descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </section>
+                    <button onclick="copiar()" id="botao_copiar" class="botao_copiar desligar">Copiar</button>
+                </section>
+            </section>
+
+
+            <footer>Desenvolvido por Robert Alexandre</footer>
+
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
